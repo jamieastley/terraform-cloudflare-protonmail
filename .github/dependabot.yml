@@ -6,3 +6,5 @@ updates:
       interval: "daily"
       time: "19:00"
       timezone: "Australia/Sydney"
+    commit-message:
+      prefix: "chore:"
