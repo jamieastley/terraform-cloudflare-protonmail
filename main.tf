@@ -19,9 +19,9 @@ resource "cloudflare_record" "mx" {
 
 resource "cloudflare_record" "dkim" {
   for_each = {
-    "protonmail._domainkey"  = "${var.dkim_1}"
-    "protonmail2._domainkey" = "${var.dkim_2}"
-    "protonmail3._domainkey" = "${var.dkim_3}"
+    "protonmail._domainkey"  = var.dkim_1
+    "protonmail2._domainkey" = var.dkim_2
+    "protonmail3._domainkey" = var.dkim_3
   }
   zone_id = var.cloudflare_zone_id
   name    = "${each.key}.${var.domain}"
